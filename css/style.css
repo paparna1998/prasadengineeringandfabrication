@@ -744,6 +744,18 @@ section {
   color: var(--primary-color);
 }
 
+.front-about {
+  background: var(--section-bg-color);
+}
+
+.about-image {
+  top: 1%;
+  left: 2%;
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
 /*---------------------------------------
   FAQ ACCORDION               
 -----------------------------------------*/
@@ -1142,6 +1154,18 @@ button:focus:not(:focus-visible) {
   }
 
   .header-image {
+    position: relative;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    margin: 0 auto; 
+    display: block; 
+    width: auto;
+    height: auto;
+  }
+
+  .about-image {
     position: relative;
     top: auto;
     bottom: 0;
