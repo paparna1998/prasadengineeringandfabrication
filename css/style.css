@@ -155,6 +155,8 @@ a:hover {
 .lead {
   font-size: 1.5rem;
   font-weight: var(--font-weight-normal);
+  text-align: justify; 
+  margin: 0 auto; 
 }
 
 b,
@@ -489,11 +491,11 @@ strong {
 
 .header-image {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 1%;
+  right: 2%;
   width: 50%;
-  height: 100%;
-  object-fit: cover;
+  height: 96%;
+  /* object-fit: cover; */
 }
 
 /*---------------------------------------
@@ -954,6 +956,7 @@ button:focus:not(:focus-visible) {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 /*---------------------------------------
   CONTACT              
 -----------------------------------------*/
@@ -1134,8 +1137,8 @@ button:focus:not(:focus-visible) {
   }
 
   .header-info {
-    padding-top: 50px;
     padding-bottom: 100px;
+    text-align: center;
   }
 
   .header-image {
@@ -1143,6 +1146,9 @@ button:focus:not(:focus-visible) {
     top: auto;
     bottom: 0;
     left: 0;
+    right: 0; 
+    margin: 0 auto; 
+    display: block; 
     width: auto;
     height: auto;
   }
@@ -1179,3 +1185,17 @@ button:focus:not(:focus-visible) {
   }
 }
 
+@media screen and (max-width: 995px) {
+  .site-header {
+    margin-top: 10px;
+  }
+
+  .site-header.section-padding-img{
+    padding-top: 8rem; 
+    padding-bottom: 3rem;
+  }
+
+  .product-heading {
+    margin-top: 50px;
+  }
+}
