@@ -473,6 +473,19 @@ h4 span {
   top: 8px;
 }
 
+.navbar-expand-lg .navbar-nav .blink {
+  animation: blinkAnimation 1.5s ease-in-out infinite;
+}
+
+@keyframes blinkAnimation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 /*---------------------------------------
   SITE HEADER              
 -----------------------------------------*/

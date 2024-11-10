@@ -64,6 +64,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
+
+                        <li class="nav-item">
+                            <button type="button" id="downloadBtn" class="btn btn-info position-relative" style="padding: 0.5px;
+                            margin-right: 1.5rem;
+                            margin-left: 1.5rem;">
+                                Profile
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-2 bg-warning border border-light rounded-circle blink">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -79,7 +91,8 @@
                             <div class="col-lg-6 col-10">
                                 <h1 class="slick-title">About Us</h1>
 
-                                <p class="lead text-white mt-lg-3 mb-lg-5">We specialize in delivering high-quality, custom fabrication services with a focus on precision and innovation.</p>
+                                <p class="lead text-white mt-lg-3 mb-lg-5">We specialize in delivering high-quality,
+                                    custom fabrication services with a focus on precision and innovation.</p>
 
                                 <a href="about.html" class="btn custom-btn">Know more about us</a>
                             </div>
@@ -115,7 +128,9 @@
                             <div class="col-lg-6 col-10">
                                 <h1 class="slick-title">Talk to us</h1>
 
-                                <p class="lead text-white mt-lg-3 mb-lg-5">We offer expert fabrication services with a strong emphasis on precision and quality. For any inquiries, please feel free to contact us.</p>
+                                <p class="lead text-white mt-lg-3 mb-lg-5">We offer expert fabrication services with a
+                                    strong emphasis on precision and quality. For any inquiries, please feel free to
+                                    contact us.</p>
 
                                 <a href="contact.html" class="btn custom-btn">Contact us</a>
                             </div>
@@ -194,7 +209,8 @@
                     <div class="col-lg-4 col-12 mb-3">
                         <div class="product-thumb">
                             <a href="jacketedPressureVessels.html">
-                                <img src="images/product/JacketedPressureVessels.jpg" class="img-fluid product-image" alt="">
+                                <img src="images/product/JacketedPressureVessels.jpg" class="img-fluid product-image"
+                                    alt="">
                             </a>
 
                             <div class="product-top d-flex">
@@ -204,11 +220,14 @@
                             <div class="product-info d-flex">
                                 <div>
                                     <h5 class="product-title mb-0">
-                                        <a href="jacketedPressureVessels.html" class="product-title-link">Jacketed Pressure
+                                        <a href="jacketedPressureVessels.html" class="product-title-link">Jacketed
+                                            Pressure
                                             Vessels</a>
                                     </h5>
 
-                                    <p class="product-p">It comes with secondary pressure enclosure, installed on the periphery of shell or the dished heads of pressure vessels for heating or cooling applications.</p>
+                                    <p class="product-p">It comes with secondary pressure enclosure, installed on the
+                                        periphery of shell or the dished heads of pressure vessels for heating or
+                                        cooling applications.</p>
                                 </div>
                             </div>
                         </div>
@@ -230,7 +249,9 @@
                                         <a href="storageTank.html" class="product-title-link">Storage Tank</a>
                                     </h5>
 
-                                    <p class="product-p">Oil and gas industry is the prime vendee of storage tanks for bulk contamination of fluids to perform different stages of the refinery process. </p>
+                                    <p class="product-p">Oil and gas industry is the prime vendee of storage tanks for
+                                        bulk contamination of fluids to perform different stages of the refinery
+                                        process. </p>
                                 </div>
                             </div>
                         </div>
@@ -257,8 +278,8 @@
 
                             <h2 class="mb-4">Mission</h2>
 
-                            <img src="images/mission.jpg" class="img-fluid product-image" alt=""
-                                height="100" width="100">
+                            <img src="images/mission.jpg" class="img-fluid product-image" alt="" height="100"
+                                width="100">
 
                             <p>To provide a level of service that will exceed the expectations of our clients. Maintain
                                 the highest level of quality and allow our employees the opportunity to grow and
@@ -272,8 +293,8 @@
 
                             <h2 class="mb-4">Vision</h2>
 
-                            <img src="images/vision.jpg" class="img-fluid product-image" alt=""
-                                height="100" width="100">
+                            <img src="images/vision.jpg" class="img-fluid product-image" alt="" height="100"
+                                width="100">
 
                             <p>The core of our company is to act with integrity in all our interactions, to provide our
                                 clients with real value gained from our experiences. Our vision is to maintain and
@@ -375,7 +396,8 @@
 
                         <li><a href="#" class="social-icon-link bi-instagram"></a></li>
 
-                        <li><a href="https://whatsapp.com/channel/0029VajrT5CHltYGMiqibL0s" class="social-icon-link bi-whatsapp"></a></li>
+                        <li><a href="https://whatsapp.com/channel/0029VajrT5CHltYGMiqibL0s"
+                                class="social-icon-link bi-whatsapp"></a></li>
 
                         <li><a href="https://t.me/prsadenggandfabrications" class="social-icon-link bi-telegram"></a>
                         </li>
@@ -394,6 +416,29 @@
     <script src="js/jQuery.headroom.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            const pdfUrl = './files/PRASAD_ENGG_PROFILE .pdf';
+
+            fetch(pdfUrl, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        const link = document.createElement('a');
+                        link.href = pdfUrl;
+                        link.download = 'PRASAD_ENGG_PROFILE.pdf';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    } else {
+                        alert('File not found!');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+
+    </script>
 
 </body>
 
